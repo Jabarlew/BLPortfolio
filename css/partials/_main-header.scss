@@ -1,0 +1,83 @@
+.main-header {
+    height: 100%;
+    width: 100%;
+    background-color: $red;
+    position: fixed;
+    left: 95%;
+}
+
+.header-menu-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: .5s;
+
+    &:hover {
+        background-color: $light-blue;
+    }
+}
+
+.header-hamburger-icon {
+    width: 40px;
+    height: 5px;
+    position: relative;
+    background-color: $dark-blue;
+    transition: .5s;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 5px;
+        background-color: $dark-blue;
+        transition: .5s;
+    }
+
+    &::before {
+        top: -12px;
+    }
+
+    &::after {
+        top: 12px;
+    }
+}
+
+.menu-open {
+    background-color: $light-blue;
+}
+
+.menu-open .header-hamburger-icon {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+.menu-open .header-hamburger-icon::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+
+.menu-open .header-hamburger-icon::after {
+    top: 0;
+    transform: rotate(135deg);
+}
+
+
+.logo-header {
+    color: $dark-blue;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.1rem;
+    //   letter-spacing: .7px;
+    transform: rotate(-90deg);
+    display: block;
+    bottom: 0;
+    left: 2.2%;
+    position: absolute;
+    width: 10px;
+    margin-bottom: 1rem;
+}
