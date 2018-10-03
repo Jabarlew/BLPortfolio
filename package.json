@@ -1,27 +1,30 @@
 {
   "name": "mysite",
-  "version": "1.0.0",
-  "description": "Design by Bartosz Lewandowski and licensed under CC BY-NC-ND 4.0",
+  "version": "0.1.0",
+  "description": "Portfolio Website of Bartosz Lewandowski",
   "main": "index.js",
-  "dependencies": {
-    "node-sass": "^4.9.3",
-    "normalize.css": "^8.0.0"
-  },
-  "devDependencies": {
-    "browser-sync": "^2.24.7"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-server": "webpack-dev-server --mode=development"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Jabarlew/BLPortfolio.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Bartosz Lewandowski",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Jabarlew/BLPortfolio/issues"
   },
-  "homepage": "https://github.com/Jabarlew/BLPortfolio#readme"
+  "homepage": "https://github.com/Jabarlew/BLPortfolio#readme",
+  "dependencies": {
+    "node-sass": "^4.9.3",
+    "normalize.css": "^8.0.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  }
 }
