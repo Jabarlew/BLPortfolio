@@ -1,0 +1,27 @@
+{
+  "name": "mysite",
+  "version": "1.0.0",
+  "description": "Design by Bartosz Lewandowski and licensed under CC BY-NC-ND 4.0",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^4.9.3",
+    "normalize.css": "^8.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.24.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jabarlew/BLPortfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jabarlew/BLPortfolio/issues"
+  },
+  "homepage": "https://github.com/Jabarlew/BLPortfolio#readme"
+}
