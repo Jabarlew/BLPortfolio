@@ -3,65 +3,70 @@
     width: 100%;
     background-color: $red;
     position: fixed;
-    left: 95%;
-}
+    transform: translateX(100%);
+    right: 5rem;
 
-.header-menu-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 80px;
-    cursor: pointer;
-    transition: .5s;
 
-    &:hover {
-        background-color: $light-blue;
-    }
-}
-
-.header-hamburger-icon {
-    width: 40px;
-    height: 5px;
-    position: relative;
-    background-color: $dark-blue;
-    transition: .5s;
-
-    &::before,
-    &::after {
-        content: '';
-        position: absolute;
-        width: 40px;
-        height: 5px;
-        background-color: $dark-blue;
+    &-menu-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
         transition: .5s;
-    }
 
-    &::before {
-        top: -12px;
-    }
+        &:hover {
+            background-color: $light-blue;
+        }
 
-    &::after {
-        top: 12px;
+
+        &-hamburger {
+            width: 40px;
+            height: 5px;
+            position: relative;
+            background-color: $dark-blue;
+            transition: .5s;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                width: 40px;
+                height: 5px;
+                background-color: $dark-blue;
+                transition: .5s;
+            }
+
+            &::before {
+                top: -12px;
+            }
+
+            &::after {
+                top: 12px;
+            }
+        }
     }
 }
+
+
 
 .menu-open {
     background-color: $light-blue;
 }
 
-.menu-open .header-hamburger-icon {
+.menu-open .main-header-menu-icon-hamburger {
     background-color: rgba(0, 0, 0, 0);
 }
 
 
-.menu-open .header-hamburger-icon::before {
+.menu-open .main-header-menu-icon-hamburger::before {
     top: 0;
     transform: rotate(45deg);
 }
 
 
-.menu-open .header-hamburger-icon::after {
+.menu-open .main-header-menu-icon-hamburger::after {
     top: 0;
     transform: rotate(135deg);
 }
@@ -76,7 +81,7 @@
     transform: rotate(-90deg);
     display: block;
     bottom: 0;
-    left: 2.2%;
+    left: 2.2rem;
     position: absolute;
     width: 10px;
     margin-bottom: 1rem;
