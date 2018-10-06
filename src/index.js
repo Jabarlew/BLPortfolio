@@ -4,6 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const navToggleElement = document.querySelector('.main-header-menu-icon');
 
   navToggleElement.addEventListener('click', () => {
-    navToggleElement.classList.toggle('menu-open');
+    document.body.classList.toggle('menu-open');
   });
 });

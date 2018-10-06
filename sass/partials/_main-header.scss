@@ -5,6 +5,16 @@
     position: fixed;
     transform: translateX(100%);
     right: 5rem;
+    transition: 1s;
+    transition-delay: .3s;
+
+    &-animation {
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      transform: translateX(100%);
+      right: 5rem;
+    }
 
 
     &-menu-icon {
@@ -51,9 +61,9 @@
 
 
 
-.menu-open {
-    background-color: $light-blue;
-}
+// .menu-open {
+//     background-color: $light-blue;
+// }
 
 .menu-open .main-header-menu-icon-hamburger {
     background-color: rgba(0, 0, 0, 0);
@@ -85,4 +95,41 @@
     position: absolute;
     width: 10px;
     margin-bottom: 1rem;
+}
+
+.menu-open .main-header {
+  transform: translateX(0);
+  right: 0;
+}
+
+.one {
+  background-color: $blue;
+  transition: 1s;
+  transition-delay: .2s;
+}
+
+.menu-open .one {
+  transform: translateX(0);
+  right: 0;
+}
+
+.two {
+  background-color: $yellow;
+  transition: 1s;
+  transition-delay: .1s
+}
+
+.menu-open .two {
+  transform: translateX(0);
+  right: 0;
+}
+
+.three {
+  background-color: $dark-blue;
+  transition: 1s;
+}
+
+.menu-open .three {
+  transform: translateX(0);
+  right: 0;
 }
