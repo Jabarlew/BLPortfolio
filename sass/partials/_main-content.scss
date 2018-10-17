@@ -1,0 +1,28 @@
+.main-content-hero {
+  padding-left: 3rem;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+
+
+  &-text-one {
+    margin: 0;
+    font-size: 4rem;
+    color: $light-blue;
+    // opacity: 0;
+    animation: show-text 0.0001s linear forwards;
+    animation-delay: 1.4s;
+    border: solid 1px white;
+  }
+
+  &-text-two {
+    margin-top: .8rem;
+    font-size: 2rem;
+    font-weight: 400;
+    color: $light-blue;
+  }
+}
+
+
