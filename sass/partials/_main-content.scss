@@ -13,7 +13,7 @@
   &-text-one {
     margin: 0;
     font-size: 4rem;
-    color: $light-blue;
+    color: #fff;
     // opacity: 0;
     animation: show-text 0.0001s linear forwards;
     animation-delay: 1.4s;
@@ -22,7 +22,7 @@
       content: '';
       width: 100%;
       height: 100%;
-      background-color: black;
+      background-color: #fff;
     }
   }
 
