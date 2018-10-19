@@ -6,9 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "shell-exec 'npm run dev-server' 'npm run sass -- -w'",
-    "dev-server": "webpack-dev-server --mode=development --content-base ./public",
+    "build": "shell-exec 'npm run sass' 'webpack --env=production'",
+    "dev-server": "webpack-dev-server --env=development",
     "sass": "node-sass -r sass/main.scss -o public",
-    "ngrok": "ngrok http 8080"
+    "ngrok": "ngrok http 8080 -host-header='localhost:8080'"
   },
   "repository": {
     "type": "git",
@@ -25,11 +26,14 @@
     "normalize.css": "^8.0.0"
   },
   "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
+    "html-webpack-plugin": "^3.2.0",
     "ngrok": "^3.1.0",
     "node-sass": "^4.9.3",
     "shell-executor": "^6.0.1",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.9"
+    "webpack-dev-server": "^3.1.9",
+    "webpack-merge": "^4.1.4"
   }
 }
