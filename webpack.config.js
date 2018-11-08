@@ -72,7 +72,7 @@ const environments = {
     plugins: [new webpack.HotModuleReplacementPlugin()],
     devServer: {
       host: '0.0.0.0',
-      publicPath: '/public',
+      publicPath: '/',
       inline: true,
       hot: true,
       historyApiFallback: true,
