@@ -5,11 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "shell-exec 'npm run sass:dev' 'npm run dev-server'",
-    "js:build": "webpack --env=production",
-    "dev-server": "webpack-dev-server --env=development",
+    "dev": "npm run sass && shell-exec 'npm run sass:dev' 'npm run js:dev' 'npm run view:dev' 'npm run dev-server'",
+    "build": "shell-exec 'npm run js' 'npm run sass' 'npm run view'",
+    "js": "webpack --mode=production",
+    "js:dev": "webpack -w --mode=development",
+    "view": "pug src/views/*.pug -o dist",
+    "view:dev": "npm run view -- -w",
     "sass": "node-sass -r src/styles/main.scss -o dist/assets",
-    "sass:dev": "npm run sass && npm run sass -- -w",
+    "sass:dev": "npm run sass -- -w",
+    "dev-server": "http-server -p 8080 dist",
     "ngrok": "ngrok http 8080 -host-header='localhost:8080'"
   },
   "repository": {
@@ -27,12 +31,12 @@
     "normalize.css": "^8.0.0"
   },
   "devDependencies": {
+    "http-server": "^0.11.1",
     "ngrok": "^3.1.0",
     "node-sass": "^4.9.3",
+    "pug-cli": "^1.0.0-alpha6",
     "shell-executor": "^6.0.1",
     "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.9",
-    "webpack-merge": "^4.1.4"
+    "webpack-cli": "^3.1.2"
   }
 }
