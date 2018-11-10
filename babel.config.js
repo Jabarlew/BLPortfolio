@@ -1,5 +1,5 @@
 'use strict';
 
 module.exports = {
-  presets: [['@babel/env', { useBuiltIns: 'usage'  }]],
+  presets: [['@babel/env', { useBuiltIns: 'usage' }]],
 };
