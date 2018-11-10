@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npm run dev-server",
-    "build": "webpack --env=production",
+    "dev": "shell-exec 'npm run sass:dev' 'npm run dev-server'",
+    "js:build": "webpack --env=production",
     "dev-server": "webpack-dev-server --env=development",
-    "sass": "node-sass -r sass/main.scss -o public/assets",
+    "sass": "node-sass -r src/sass/main.scss -o dist/assets",
+    "sass:dev": "npm run sass && npm run sass -- -w",
     "ngrok": "ngrok http 8080 -host-header='localhost:8080'"
   },
   "repository": {
@@ -26,16 +27,9 @@
     "normalize.css": "^8.0.0"
   },
   "devDependencies": {
-    "clean-webpack-plugin": "^0.1.19",
-    "copy-webpack-plugin": "^4.5.4",
-    "css-loader": "^1.0.0",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "html-webpack-plugin": "^3.2.0",
     "ngrok": "^3.1.0",
     "node-sass": "^4.9.3",
-    "sass-loader": "^7.1.0",
     "shell-executor": "^6.0.1",
-    "style-loader": "^0.23.1",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.9",
