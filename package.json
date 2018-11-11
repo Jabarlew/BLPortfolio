@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npm run sass && shell-exec 'npm run sass:dev' 'npm run js:dev' 'npm run view:dev' 'npm run dev-server' 'cpx src/assets/**/* dist/assets'",
-    "build": "shell-exec 'npm run js' 'npm run sass' 'npm run view'",
+    "dev": "npm run clean && npm run sass && shell-exec 'npm run sass:dev' 'npm run js:dev' 'npm run view:dev' 'npm run dev-server' 'npm run copy:dev'",
+    "build": "npm run clean && shell-exec 'npm run js' 'npm run sass' 'npm run view'",
     "js": "webpack --mode=production",
     "js:dev": "webpack -w --mode=development",
     "view": "pug src/views/*.pug -o dist",
@@ -15,7 +15,9 @@
     "sass:dev": "npm run sass -- -w",
     "dev-server": "http-server -p 8080 dist",
     "ngrok": "ngrok http 8080 -host-header='localhost:8080'",
-    "copy": "cp -r src/assets dist"
+    "copy": "cpx \"src/assets/**/*.{svg,png,jpg}\" dist/assets",
+    "copy:dev": "npm run copy -- -w",
+    "clean": "rm -rf dist"
   },
   "repository": {
     "type": "git",
