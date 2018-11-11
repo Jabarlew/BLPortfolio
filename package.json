@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npm run sass && shell-exec 'npm run sass:dev' 'npm run js:dev' 'npm run view:dev' 'npm run dev-server'",
+    "dev": "npm run sass && shell-exec 'npm run sass:dev' 'npm run js:dev' 'npm run view:dev' 'npm run dev-server' 'cpx src/assets/**/* dist/assets'",
     "build": "shell-exec 'npm run js' 'npm run sass' 'npm run view'",
     "js": "webpack --mode=production",
     "js:dev": "webpack -w --mode=development",
@@ -14,7 +14,8 @@
     "sass": "node-sass -r src/styles/main.scss -o dist/assets",
     "sass:dev": "npm run sass -- -w",
     "dev-server": "http-server -p 8080 dist",
-    "ngrok": "ngrok http 8080 -host-header='localhost:8080'"
+    "ngrok": "ngrok http 8080 -host-header='localhost:8080'",
+    "copy": "cp -r src/assets dist"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
   "homepage": "https://github.com/Jabarlew/BLPortfolio#readme",
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
+    "cpx": "^1.5.0",
     "normalize.css": "^8.0.0"
   },
   "devDependencies": {

@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  background: url(/assets/images/galaxy-listing-freebie.svg) no-repeat 50% 50%;
+  background: url(/src/assets/img/background.svg) no-repeat 50% 50%;
   background-size: 125%;
   // background-color: rgba(0, 0, 0, 0.3);
 
@@ -19,14 +19,14 @@
     animation: show-text 0.0001s linear forwards;
     animation-delay: 1.4s;
 
-    &::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #fff;
-    }
+    // &::after {
+    //   content: '';
+    //   position: absolute;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   background-color: #fff;
+    // }
   }
 
 
